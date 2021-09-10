@@ -1,0 +1,164 @@
+.cta-one {
+    background: $thm_base_color url(../images/cta-bg-1-1.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 123.5px;
+    padding-bottom: 123.5px;
+
+    .container {
+        position: relative;
+    }
+}
+
+
+.cta-two {
+    background-color: #fff;
+    position: relative;
+    padding-top: 330px;
+    padding-bottom: 120px;
+    clip-path: polygon(0 0, 100% 31%, 100% 100%, 0% 100%);
+
+    .block-title {
+        margin-bottom: 40px;
+    }
+
+    &__moc {
+        position: absolute;
+        top: 290px;
+        right: 0;
+    }
+
+    &__single+&__single {
+        margin-top: 50px;
+    }
+
+    &__icon,
+    &__content {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    &__icon i {
+        color: $thm_base_color;
+        font-size: 64px;
+    }
+
+    &__content {
+        padding-left: 35px;
+    }
+
+    &__title {
+        margin: 0;
+        color: $thm_black;
+        font-size: 18px;
+        font-family: $thm_font_bold;
+        letter-spacing: -0.02em;
+        margin-bottom: 30px;
+
+        a {
+            color: inherit;
+            transition: all .4s ease;
+
+            &:hover {
+                color: $thm_base_color;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 34px;
+        margin: 0;
+    }
+
+    &__btn {
+        margin-top: 60px;
+        margin-left: 100px;
+    }
+}
+
+.cta-three {
+    margin-bottom: -330px;
+    padding-bottom: 385px;
+    background-image: linear-gradient(90deg, rgb(242, 243, 249) 0%, rgb(252, 253, 254) 100%);
+    padding-top: 450px;
+    clip-path: polygon(0 0, 100% 31%, 100% 100%, 0% 100%);
+
+    &__image {
+        position: relative;
+        overflow: hidden;
+        left: -30px;
+        animation-fill-mode: both;
+        animation-name: shapeRotate;
+        animation-timing-function: linear;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        transform-origin: center center;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: transparent url(../images/cta-shape-1-1.png) center center no-repeat;
+            background-size: 100%;
+        }
+
+        >img {
+            max-width: 100%;
+        }
+    }
+
+    .block-title {
+    	margin-bottom: 20px;
+    }
+
+    &__text {
+    	margin: 0;
+    	font-size: 16px;
+    	line-height: 36px;
+    	letter-spacing: -0.02em;
+    }
+    &__list {
+    	margin: 0;
+    	padding: 0;
+    	list-style: none;
+    	margin-top: 35px;
+    	margin-bottom: 50px;
+    	&-item {
+    		padding-left: 25px;
+    		color: #8B8C9C;
+    		font-size: 16px;
+    		position: relative;
+    		i {
+    			position: absolute;
+    			top: 50%;
+    			left: 0;
+    			transform: translateY(-50%);
+    			color: $thm_base_color;
+    		}
+    	}
+    	&-item+ &-item {
+    		margin-top: 7px;
+    	}
+    }
+}
+
+@keyframes shapeRotate {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    20%,
+    80% {
+        transform: translateY(10px);
+    }
+
+    60% {
+        transform: translateY(20px);
+    }
+}

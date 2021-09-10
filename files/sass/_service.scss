@@ -1,0 +1,181 @@
+.service-one {
+    position: relative;
+    margin-bottom: -360px;
+    z-index: 10;
+
+    &:before {
+        content: '';
+        width: 755px;
+        height: 755px;
+        border: 130px solid $thm_primary_color;
+        position: absolute;
+        top: -40%;
+        left: 75%;
+        border-radius: 50%;
+        transform-origin: center bottom;
+        animation-fill-mode: both;
+        animation-name: bounce;
+        animation-timing-function: ease-out;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    &__single {
+        position: relative;
+        margin-bottom: 60px;
+        padding-top: 60px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 15px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 10px 60px 0px rgba(37, 39, 88, 0.1);
+    }
+
+    &__icon {
+        width: 121px;
+        height: 121px;
+        border-radius: 50%;
+
+        @include thmGradient();
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-image: linear-gradient(0deg, rgb(114, 63, 208) 0%, rgb(134, 76, 216) 100%);
+
+            clip-path: ellipse(30% 50% at 0% 52%);
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            transform: rotate(-45deg);
+        }
+
+        i {
+            color: #fff;
+            font-size: 63px;
+            position: relative;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        color: $thm_black;
+        font-size: 20px;
+        line-height: 34px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        font-family: $thm_font_bold;
+        margin-bottom: 17px;
+        margin-top: 30px;
+
+        a {
+            color: inherit;
+            transition: all .4s ease;
+
+            &:hover {
+                color: $thm_base_color;
+            }
+        }
+    }
+
+    &__text {
+        margin: 0;
+        color: #8B8C9C;
+        font-size: 14px;
+        line-height: 34px;
+    }
+
+    &__btn {
+        border-top: 1px solid #EFF0F7;
+        font-size: 12px;
+        font-family: $thm_font_bold;
+        color: $thm_black;
+        width: 100%;
+        position: relative;
+        padding: 17px 0;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        transition: all .4s ease;
+        margin-top: 30px;
+
+        &:before {
+            content: '';
+            width: 81px;
+            height: 1px;
+            background-color: $thm_base_color;
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%) scale(1, 1);
+            transform-origin: center center;
+            transition: transform .4s ease;
+        }
+
+        &:hover {
+            color: $thm_black;
+            background-color: $thm_primary_color;
+
+            &:before {
+                transform: translateX(-50%) scale(0, 1);
+            }
+        }
+    }
+}
+
+[class*=service-one__dot-] {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $thm_primary_color;
+    animation-fill-mode: both;
+    animation-name: dotsAnim;
+    animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.service-one__dot-1 {
+    top: 50px;
+    left: 105px;
+}
+
+.service-one__dot-2 {
+    left: 110px;
+    top: 175px;
+}
+
+.service-one__dot-3 {
+    right: 90px;
+    top: 95px;
+}
+
+@keyframes dotsAnim {
+    0%, 100% {
+        transform: perspective(30px) scale(1) translateX(0) translateY(0);
+        opacity: 1;
+    }
+    33% {
+        transform: perspective(30px) scale(1.1) translateX(-5px) translateY(5px);
+        opacity: .3;
+    }
+    66% {
+        transform: perspective(30px) scale(1.2) translateX(-15px) translateY(15px);
+        opacity: .6;
+    }
+}

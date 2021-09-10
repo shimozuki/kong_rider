@@ -1,0 +1,185 @@
+.banner-one {
+    background: transparent url(../images/banner-1-1.png) top right no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 274px;
+    padding-bottom: 515px;
+    z-index: 11;
+
+
+    &__globe {
+    	position: absolute;
+    	top: 15%;
+    	left: 15%;
+    	animation-fill-mode: both;
+        animation-name: globeRotate;
+        animation-timing-function: linear;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+
+    &__rocket {
+    	position: absolute;
+    	bottom: 40%;
+    	left: 40%;
+
+    	animation-fill-mode: both;
+        animation-name: rocketMove;
+        animation-timing-function: linear;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+    }
+
+    &__moc {
+        position: absolute;
+        top: 140px;
+        right: 0;
+
+        animation-fill-mode: both;
+        animation-name: shapeRotate;
+        animation-timing-function: linear;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        transform-origin: center center;
+    }
+
+    &__tag-line {
+        margin: 0;
+        display: inline-block;
+        border-radius: 16px;
+        background-color: rgba(#fff, .1);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        overflow: hidden;
+        color: #FFFFFF;
+        font-family: $thm_font_bold;
+        line-height: 32px;
+        padding-left: 20px;
+
+        a {
+            display: inline-block;
+            background-color: $thm_primary_color;
+            color: $thm_black;
+            line-height: 32px;
+            padding: 0 20px;
+            margin-left: 10px;
+            transition: all .4s ease;
+
+            &:hover {
+                background-color: $thm_black;
+                color: #fff;
+            }
+        }
+    }
+
+    &__title {
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        color: #fff;
+        font-size: 70px;
+        line-height: 80px;
+        font-family: $thm_font_extrabold;
+        letter-spacing: -0.04em;
+    }
+}
+
+[class*=banner-one__shape-] {
+    position: absolute;
+    width: 110px;
+    height: 20px;
+    background-color: #000000;
+    opacity: .08;
+
+    animation-fill-mode: both;
+    animation-name: reactangleRotate;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform-origin: center center;
+}
+
+.banner-one__shape-1 {
+    background-color: #fff;
+}
+
+.banner-one__shape-6,
+.banner-one__shape-2 {
+    background-color: #fff;
+    width: 88px;
+}
+
+.banner-one__shape-5,
+.banner-one__shape-3 {
+    width: 44px;
+    height: 10px;
+}
+
+.banner-one__shape-5 {
+    background-color: #fff;
+}
+
+
+
+.banner-one__shape-1 {
+    top: 25%;
+    left: 5%;
+}
+
+.banner-one__shape-2 {
+    top: 15%;
+    left: 40%;
+}
+
+.banner-one__shape-3 {
+    left: 20%;
+    bottom: 40%;
+}
+
+.banner-one__shape-4 {
+    left: 50%;
+    top: 45%;
+}
+
+.banner-one__shape-5 {
+    top: 10%;
+    right: 30%;
+}
+
+.banner-one__shape-6 {
+    top: 60%;
+    right: 10%;
+}
+
+@keyframes reactangleRotate {
+	8%, 100% {
+		transform: perspective(110px) rotateX(0deg) scale(1,1) rotateZ(0) translatez(0);
+	}
+	30%, 80% {
+		transform: perspective(110px) rotateX(180deg) scale(1, 1.05) rotateZ(180deg) translatez(5px);
+	}
+	60% {
+		transform: perspective(110px) rotateX(360deg) scale(1, 1.05) rotateZ(360deg) translatez(10px);
+	}
+}
+
+@keyframes globeRotate  {
+	8% {
+		transform: perspective(200px) rotateX(0deg);
+	}
+	100% {
+		transform: perspective(200px) rotateX(360deg);
+	}
+}
+
+@keyframes rocketMove  {
+	8% {
+		transform: perspective(600px) translateY(0) translateX(0) rotate(0);
+		opacity: 1;
+	}
+	100% {
+		transform: perspective(600px) translateY(-400px) translateX(-300px) rotate(0);
+		opacity: 0;
+	}
+}

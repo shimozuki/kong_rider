@@ -1,0 +1,170 @@
+.header-navigation {
+    background-color: transparent;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    position: relative;
+    background-color: transparent;
+
+    .container {
+        background: transparent;
+        position: relative;
+        display: block;
+
+        .logo-box {
+            float: left;
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .navbar-brand {
+            height: auto;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .menu-toggler {
+            display: none;
+        }
+
+        .right-side-box {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            right: 15px;
+        }
+    }
+
+    .main-navigation {
+        float: none;
+        text-align: center;
+
+        @media (min-width: 1200px) {
+            display: block !important;
+        }
+    }
+}
+
+.header-navigation ul.navigation-box {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li a .sub-nav-toggler {
+        display: none;
+    }
+
+    >li {
+        position: relative;
+        padding: 32.5px 0;
+        display: inline-block;
+        vertical-align: middle;
+
+        +li {
+            margin-left: 50px;
+
+        }
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        >a {
+            font-size: 14px;
+            color: #ffffff;
+            padding: 0;
+            transition: all .4s ease;
+            position: relative;
+            text-transform: capitalize;
+            letter-spacing: -0.02em;
+        }
+
+        &.current>a,
+        &:hover>a {
+            color: $thm_primary_color;
+        }
+
+        /* Second Level Menu */
+        @include dropDownMenuBase($selector: 'sub-menu', $position_top: 100%, $position_left: 0);
+
+        &:hover {
+            &:before {
+                transform: scale(1, 1);
+                transform-origin: left bottom;
+            }
+
+            @include dropDownMenuHover($selector: 'sub-menu');
+        }
+
+        /* Thrid Level Menu */
+        >ul>li {
+            @include dropDownMenuBase($selector: 'sub-menu', $position_top: 0%, $position_left: 100%, $right_align_position: 100%);
+
+            &:hover {
+                @include dropDownMenuHover($selector: 'sub-menu');
+            }
+
+            /* no more nested showen */
+            ul {
+                display: none;
+            }
+        }
+
+    }
+}
+
+
+
+.header-one {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    
+    border-bottom: 1px solid rgba(#fff, .1);
+    &__btn {
+        background-color: #fff;
+        color: $thm_black;
+        padding: 3.5px 29.5px;
+        border-radius: 20.5px;
+        font-size: 12px;
+        font-family: $thm_font_bold;
+    }
+}
+
+
+
+.stricked-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    @include thmGradient();
+    box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    transform: translateY(-110%);
+    transition: all .4s ease;
+
+    ul.navigation-box>li {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+}
+
+.stricked-menu.stricky-fixed {
+    opacity: 1;
+    transform: translateY(0%);
+}

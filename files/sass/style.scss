@@ -1,0 +1,111 @@
+/***************************************************************************************************************
+||||||||||||||||||||||||||||            MASTER STYLESHEET FOR LUMS          ||||||||||||||||||||||||||||||||||||
+****************************************************************************************************************
+||||||||||||||||||||||||||||              TABLE OF CONTENT                  ||||||||||||||||||||||||||||||||||||
+****************************************************************************************************************
+****************************************************************************************************************
+* 1. imported styles
+* 2. common styles
+* 3. header styles
+* 4. banner styles
+* 5. blog styles
+* 6. cta styles
+* 7. footer styles
+* 8. inner-banner styles
+* 9. sidebar styles
+* 10. funfact styles
+* 11. brand styles
+* 12. testimonials styles
+* 13. pricing styles
+* 14. service styles
+****************************************************************************************************************
+||||||||||||||||||||||||||||            End TABLE OF CONTENT                ||||||||||||||||||||||||||||||||||||
+****************************************************************************************************************/
+
+
+// helper functions
+@import 'helper-functions';
+
+/*
+* 1. imported styles
+*/
+
+@import 'imported';
+
+/*
+* 2. common styles
+*/
+
+@import 'common';
+
+/*
+* 3. header styles
+*/
+
+@import 'header';
+
+/*
+* 4. banner styles
+*/
+
+@import 'banner';
+
+/*
+* 5. blog styles
+*/
+
+@import 'blog';
+
+/*
+* 6. cta styles
+*/
+
+@import 'cta';
+
+/*
+* 7. footer styles
+*/
+
+@import 'footer';
+
+/*
+* 8. inner-banner styles
+*/
+
+@import 'inner-banner';
+
+/*
+* 9. sidebar styles
+*/
+
+@import 'sidebar';
+
+/*
+* 10. funfact styles
+*/
+
+@import 'funfact';
+
+/*
+* 11. brand styles
+*/
+
+@import 'brand';
+
+/*
+* 12. testimonials styles
+*/
+
+@import 'testimonials';
+
+/*
+* 13. pricing styles
+*/
+
+@import 'pricing';
+
+/*
+* 14. service styles
+*/
+
+@import 'service';
